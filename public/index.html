@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+
+
+    <div class="container">
+        <h2>Agenda de Contatos</h2>
+
+        <div class="formulario">
+            <input type="text" id="nome" placeholder="Nome">
+            <input type="text" id="telefone" placeholder="Telefone">
+            <input type="email" id="email" placeholder="E-mail">
+            <input type="text" id="observacao" placeholder="Observação">
+            <button id="btnSalvar" onclick="salvarContato()">Cadastrar</button>
+            <button id="btnCancelar" onclick="cancelarEdicao()" style="display:none;">Cancelar</button>
+
+            <h3>Lista de Contatos</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                        <th>Observação</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelaContatos"></tbody>
+            </table>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+
+</html>

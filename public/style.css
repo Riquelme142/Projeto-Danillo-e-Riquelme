@@ -1,0 +1,114 @@
+/* Estilos Gerais do Corpo */
+body {
+    font-family: Arial, sans-serif; /* Fonte padrão, similar ao exemplo */
+    background-color: #f4f6f8; /* Cor de fundo cinza claro para a página */
+    padding: 40px; /* Espaçamento ao redor do conteúdo */
+    display: flex; /* Para centralizar o container, se desejar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: flex-start; /* Alinha no topo */
+    min-height: 100vh; /* Garante altura mínima da janela */
+}
+
+/* Container Principal (o cartão branco) */
+.container {
+    background: white; /* Fundo branco do cartão */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 8px; /* Cantos arredondados */
+    width: 100%; /* Ocupa a largura disponível até o máximo */
+    max-width: 800px; /* Largura máxima, igual ao exemplo */
+    margin: auto; /* Centraliza se não houver flexbox no body */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para efeito de elevação */
+}
+
+/* Títulos */
+h2, h3 {
+    text-align: center; /* Títulos centralizados */
+    color: #333; /* Cor do texto escura */
+}
+
+/* Estilo do Formulário (inputs em linha) */
+.formulario {
+    display: flex; /* Disposição flexível para colocar os elementos em linha */
+    gap: 10px; /* Espaçamento entre os campos e o botão */
+    margin-bottom: 20px; /* Espaçamento abaixo do formulário */
+    justify-content: center; /* Centraliza os campos horizontalmente */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores, mantendo a responsividade */
+}
+
+/* Estilo dos Campos de Entrada (Inputs) */
+input {
+    padding: 8px 12px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda cinza clara */
+    border-radius: 4px; /* Cantos arredondados nos inputs */
+    flex: 1; /* Faz os inputs ocuparem espaço igual disponível */
+    min-width: 150px; /* Largura mínima para evitar que fiquem muito pequenos */
+}
+
+/* Estilo do Botão "Cadastrar" */
+.formulario button {
+    padding: 8px 15px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    background-color: #007bff; /* Cor de fundo azul */
+    color: white; /* Texto branco */
+    border-radius: 4px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    font-weight: bold; /* Texto em negrito (opcional, mas comum) */
+}
+
+.formulario button:hover {
+    background-color: #0056b3; /* Cor azul mais escura no hover */
+}
+
+/* Estilo da Tabela */
+table {
+    width: 100%; /* Tabela ocupa toda a largura do container */
+    border-collapse: collapse; /* Borda única entre as células */
+    margin-top: 15px; /* Espaçamento acima da tabela */
+}
+
+/* Linhas e Células da Tabela */
+table, th, td {
+    border: 1px solid #ddd; /* Borda cinza clara para as células */
+}
+
+/* Cabeçalho da Tabela (Th) */
+th {
+    background-color: #007bff; /* Fundo azul para o cabeçalho */
+    color: white; /* Texto branco no cabeçalho */
+    padding: 10px; /* Espaçamento interno mais generoso */
+    text-align: center; /* Texto centralizado */
+}
+
+/* Células de Dados da Tabela (Td) */
+td {
+    padding: 8px; /* Espaçamento interno */
+    text-align: center; /* Texto centralizado */
+    color: #555; /* Cor do texto ligeiramente mais suave */
+}
+
+/* Estilo do Botão "Excluir" na Tabela */
+td button {
+    background-color: #dc3545; /* Cor de fundo vermelha */
+    border: none; /* Sem borda */
+    color: white; /* Texto branco */
+    padding: 5px 10px; /* Espaçamento interno menor */
+    border-radius: 4px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de mão */
+}
+
+td button:hover {
+    background-color: #a71d2a; /* Cor vermelha mais escura no hover */
+}
+
+/* Responsividade Básica para a Tabela */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px; /* Diminui o tamanho da fonte em telas pequenas */
+    }
+    th, td {
+        padding: 5px; /* Diminui o espaçamento em telas pequenas */
+    }
+    .formulario {
+        flex-direction: column; /* Coloca os inputs um abaixo do outro em telas muito pequenas */
+    }
+}

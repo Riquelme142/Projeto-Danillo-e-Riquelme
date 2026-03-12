@@ -1,0 +1,36 @@
+-- 1. Criação do Banco de Dados
+-- PostgreSQL não possui IF NOT EXISTS para database
+CREATE DATABASE agenda;
+
+-- Depois de criar, conecte ao banco (exemplo no psql)
+-- \c agenda
+
+-- 2. Criação da Tabela
+CREATE TABLE IF NOT EXISTS contatos (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(20) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    observacao TEXT
+);
+
+-- 3. Função LISTAR
+SELECT id, nome, telefone, email, observacao
+FROM contatos
+ORDER BY nome ASC;
+
+-- 4. Função INSERIR
+INSERT INTO contatos (nome, telefone, email, observacao)
+VALUES ('Danilo', '(11) 99999-9999', 'danilo@email.com', 'Amigo da faculdade');
+
+-- 5. Função ATUALIZAR
+UPDATE contatos
+SET nome = 'Danilo Silva',
+    telefone = '(11) 88888-8888',
+    email = 'danilo_novo@email.com',
+    observacao = 'Observação atualizada'
+WHERE id = 1;
+
+-- 6. Função EXCLUIR
+DELETE FROM contatos
+WHERE id = 1;
